@@ -1,5 +1,6 @@
 package com.ust.app.api;
 
+import com.ust.app.dto.CompanyInfo;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -7,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MyApi {
 
     @GetMapping
-    public String sayHello() {
-        return "Hello World! Welcome to UST Global!";
+    public CompanyInfo getCompanyInfo() {
+        return new CompanyInfo("UST Global", "Trivandrum", "Digital Transformation");
     }
 
 }
